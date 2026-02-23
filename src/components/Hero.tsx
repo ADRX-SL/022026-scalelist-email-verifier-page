@@ -130,8 +130,8 @@ const Hero = () => {
           <div className="grid items-start gap-12 lg:grid-cols-2">
             {/* Left content */}
             <div className="pt-4">
-              <h1 className="mb-6 text-5xl font-extrabold leading-[1.1] tracking-tight text-foreground lg:text-6xl">
-                Get the best emails and<br />
+              <h1 className="mb-6 text-[clamp(2.5rem,5vw,3.75rem)] font-extrabold leading-[1.1] tracking-tight text-foreground">
+                <span className="whitespace-nowrap">Get the best emails and</span><br />
                 mobile numbers,<br />
                 Anywhere
               </h1>
