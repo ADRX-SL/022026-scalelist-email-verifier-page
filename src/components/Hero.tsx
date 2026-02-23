@@ -1,60 +1,100 @@
-import { Star, ArrowRight, Mail, Phone, Plus, ChevronDown } from "lucide-react";
+import { Star, ArrowRight, Globe, Triangle, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const RatingBadge = ({ rating, platform }: { rating: string; platform: string }) => (
+const RatingBadge = ({ rating, platform, icon }: { rating: string; platform: string; icon: "google" | "capterra" }) => (
   <div className="flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm">
+    {icon === "google" ? (
+      <Globe className="h-4 w-4 text-muted-foreground" />
+    ) : (
+      <Triangle className="h-4 w-4 fill-orange-500 text-orange-500" />
+    )}
+    <span className="font-medium text-foreground">{rating} on {platform}</span>
     <div className="flex">
       {[...Array(5)].map((_, i) => (
         <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
       ))}
     </div>
-    <span className="font-medium text-foreground">{rating} on {platform}</span>
   </div>
 );
 
 const BrowserMockup = () => (
-  <div className="w-full max-w-md rounded-xl border border-border bg-white shadow-xl overflow-hidden">
-    {/* Browser chrome */}
-    <div className="flex items-center gap-2 border-b border-border bg-gray-50 px-4 py-3">
-      <div className="flex gap-1.5">
-        <div className="h-3 w-3 rounded-full bg-red-400" />
-        <div className="h-3 w-3 rounded-full bg-yellow-400" />
-        <div className="h-3 w-3 rounded-full bg-green-400" />
+  <div className="relative w-full max-w-xl">
+    {/* Browser window */}
+    <div className="rounded-xl border border-border bg-white shadow-xl overflow-hidden">
+      {/* Browser chrome */}
+      <div className="flex items-center gap-2 border-b border-border bg-gray-50 px-4 py-3">
+        <div className="flex gap-1.5">
+          <div className="h-3 w-3 rounded-full bg-red-400" />
+          <div className="h-3 w-3 rounded-full bg-yellow-400" />
+          <div className="h-3 w-3 rounded-full bg-green-400" />
+        </div>
+        <div className="ml-4 flex-1 rounded-md bg-gray-200 px-3 py-1 text-xs text-muted-foreground" />
       </div>
-      <div className="ml-4 flex-1 rounded-md bg-gray-200 px-3 py-1 text-xs text-muted-foreground">
-        linkedin.com/in/daniel-scott
+      {/* Page content - LinkedIn-like placeholders */}
+      <div className="p-6 space-y-4">
+        {[...Array(4)].map((_, i) => (
+          <div key={i} className="flex gap-3">
+            <div className="h-12 w-12 rounded-md bg-gray-200 shrink-0" />
+            <div className="flex-1 space-y-2">
+              <div className="h-3 w-3/4 rounded bg-gray-200" />
+              <div className="h-3 w-1/2 rounded bg-gray-200" />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
-    {/* Extension panel */}
-    <div className="p-5">
-      <div className="mb-4 flex items-center gap-3">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-lg font-bold text-primary">
-          DS
+
+    {/* Extension panel - overlaid on right */}
+    <div className="absolute top-12 -right-4 w-64 rounded-xl border border-border bg-white shadow-2xl overflow-hidden">
+      {/* Extension header */}
+      <div className="flex items-center gap-2 px-4 pt-4 pb-2">
+        <div className="flex h-6 w-6 items-center justify-center rounded bg-primary text-[10px] font-bold text-primary-foreground">
+          S
         </div>
+        <span className="font-semibold text-sm text-foreground">Scalelist</span>
+        <div className="ml-auto flex gap-1">
+          <div className="h-4 w-4 rounded bg-gray-200" />
+          <div className="h-4 w-4 rounded bg-gray-200" />
+        </div>
+      </div>
+
+      {/* Profile */}
+      <div className="px-4 py-3 flex items-center gap-3">
+        <div className="h-10 w-10 rounded-full bg-gray-200 shrink-0" />
         <div>
-          <h4 className="font-semibold text-foreground">Daniel Scott</h4>
-          <p className="text-sm text-muted-foreground">Product Manager at Zapier</p>
+          <p className="font-bold text-sm text-foreground">Daniel Scott</p>
+          <p className="text-xs text-muted-foreground">Support Advisor at Zapier</p>
         </div>
       </div>
-      <div className="space-y-3 mb-4">
-        <div className="flex items-center gap-3 rounded-lg bg-background p-3">
-          <Mail className="h-4 w-4 text-primary" />
-          <div>
-            <p className="text-xs text-muted-foreground">Email (Verified ✓)</p>
-            <p className="text-sm font-medium text-foreground">d.scott@zapier.com</p>
-          </div>
-        </div>
-        <div className="flex items-center gap-3 rounded-lg bg-background p-3">
-          <Phone className="h-4 w-4 text-primary" />
-          <div>
-            <p className="text-xs text-muted-foreground">Mobile (Verified ✓)</p>
-            <p className="text-sm font-medium text-foreground">+1 (555) 234-5678</p>
-          </div>
-        </div>
+
+      {/* Push to Hubspot */}
+      <div className="mx-4 flex items-center justify-between rounded-lg border border-border px-3 py-2 text-sm text-muted-foreground">
+        <span>Push to Hubspot</span>
+        <ArrowRight className="h-3 w-3" />
       </div>
-      <Button className="w-full gap-2 rounded-lg">
-        <Plus className="h-4 w-4" /> Add to list
-      </Button>
+
+      {/* Add to list button */}
+      <div className="px-4 py-3">
+        <Button className="w-full gap-2 rounded-full">
+          <Play className="h-4 w-4 fill-primary-foreground" /> Add to list
+        </Button>
+      </div>
+
+      {/* Contact details */}
+      <div className="px-4 pb-2">
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1">Contact Details</p>
+        <p className="text-sm font-medium text-primary">danielscott@zapier.com</p>
+        <p className="text-sm text-foreground mt-0.5">+1 78 617 74 86</p>
+      </div>
+
+      {/* Company info */}
+      <div className="px-4 py-3 border-t border-border">
+        <div className="flex items-center gap-2 mb-1">
+          <div className="h-5 w-5 rounded bg-orange-500" />
+          <span className="font-semibold text-sm text-foreground">Zapier</span>
+        </div>
+        <p className="text-xs text-muted-foreground">Zapier, founded in 2011 by Wade Foster, Bryan Helmig, and Mike Knoop...</p>
+      </div>
     </div>
   </div>
 );
@@ -64,7 +104,7 @@ const TrustBar = () => {
   return (
     <div className="border-y border-border bg-white py-8">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
           {logos.map((logo) => (
             <span key={logo} className="text-lg font-semibold tracking-wide text-muted-foreground/60">
               {logo}
@@ -79,25 +119,24 @@ const TrustBar = () => {
 const Hero = () => {
   return (
     <>
-      <section className="relative overflow-hidden pb-12 pt-8">
+      <section className="relative overflow-hidden pb-16 pt-8">
         <div className="mx-auto max-w-6xl px-6">
           {/* Rating badges */}
           <div className="mb-8 flex flex-wrap items-center gap-3">
-            <RatingBadge rating="4.8/5" platform="Google" />
-            <RatingBadge rating="4.9/5" platform="Capterra" />
+            <RatingBadge rating="4.8 / 5" platform="Google" icon="google" />
+            <RatingBadge rating="4.9 / 5" platform="Capterra" icon="capterra" />
           </div>
 
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="grid items-start gap-12 lg:grid-cols-2">
             {/* Left content */}
-            <div>
-              <h1 className="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-foreground lg:text-6xl">
-                Get the best emails and mobile numbers,{" "}
-                <span className="text-primary">Anywhere</span>
+            <div className="pt-4">
+              <h1 className="mb-6 text-5xl font-extrabold leading-[1.1] tracking-tight text-foreground lg:text-6xl">
+                Get the best emails and mobile numbers, Anywhere
               </h1>
-              <p className="mb-8 max-w-lg text-lg text-muted-foreground">
-                Access verified professional email addresses and phone numbers from any website or social profile. Build targeted lead lists in seconds.
+              <p className="mb-10 max-w-lg text-lg text-muted-foreground">
+                Find verified professional emails and phone numbers from professional profiles and any website.
               </p>
-              <div className="mb-8 flex flex-wrap items-center gap-4">
+              <div className="mb-10 flex flex-wrap items-center gap-4">
                 <Button size="lg" className="gap-2 rounded-full px-8 text-base">
                   Try for free <ArrowRight className="h-4 w-4" />
                 </Button>
@@ -105,7 +144,7 @@ const Hero = () => {
                   Talk to Sales
                 </Button>
               </div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+              <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground/50">
                 7000+ companies save time using Scalelist
               </p>
             </div>
