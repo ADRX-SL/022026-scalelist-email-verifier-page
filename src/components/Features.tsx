@@ -28,7 +28,7 @@ const FeatureCard = ({
 
 const Features = () => {
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="mx-auto max-w-6xl px-6">
         <p className="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-primary">
           Reveal verified emails and mobile numbers on any site or profile

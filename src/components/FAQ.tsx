@@ -31,7 +31,7 @@ const faqItems = [
 
 const FAQ = () => {
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="mx-auto max-w-3xl px-6">
         <div className="mb-4 flex justify-center">
           <Badge variant="secondary" className="text-sm">FAQ</Badge>

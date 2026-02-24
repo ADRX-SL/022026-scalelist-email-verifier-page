@@ -61,7 +61,7 @@ const TestimonialCard = ({
 
 const Accuracy = () => {
   return (
-    <section className="bg-brand-dark-section py-20">
+    <section className="bg-brand-dark-section py-16">
       <div className="mx-auto max-w-6xl px-6">
         <p className="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-primary">
           Join 7,000+ companies using Scalelist

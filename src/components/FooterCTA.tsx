@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const FooterCTA = () => {
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="mx-auto max-w-6xl px-6">
         <div className="rounded-2xl bg-card p-12 text-center">
           <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-2xl font-bold text-primary-foreground">

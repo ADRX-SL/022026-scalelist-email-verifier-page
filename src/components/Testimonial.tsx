@@ -3,7 +3,7 @@ import joshBrunschImg from "@/assets/josh-brunsch.jpg";
 
 const Testimonial = () => {
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid items-center gap-12 rounded-2xl bg-card p-10 lg:grid-cols-2">
           <div>

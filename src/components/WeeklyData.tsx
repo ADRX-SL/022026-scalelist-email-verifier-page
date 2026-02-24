@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const WeeklyData = () => {
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="mx-auto max-w-6xl px-6">
         <div className="rounded-2xl bg-card p-10 text-center">
           <div className="mb-6 flex flex-wrap items-center justify-center gap-4">
