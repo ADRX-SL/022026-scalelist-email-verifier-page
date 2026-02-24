@@ -38,20 +38,19 @@ const Features = () => {
         </h2>
         <div className="grid gap-8 md:grid-cols-2">
           <FeatureCard
-            title="On Social & Professional Profiles"
+            title="On Professional Profiles"
             icon={Users}
             bullets={[
-              "Find emails and phone numbers on LinkedIn profiles instantly",
-              "Works across social networks — Twitter, Facebook, and more",
-              "One-click export to your CRM or spreadsheet",
+              "Find emails and phone numbers on Professional profiles instantly",
+              "Push leads to your CRM, CSV, or the tool of your choice in one-click",
             ]}
           />
           <FeatureCard
             title="On Any Website"
             icon={Globe}
             bullets={[
-              "Extract contact data from any company website",
-              "Automatically detect and verify email patterns",
+              "Extract emails and mobile numbers from any company website",
+              "Effortless List Building: Export leads instantly to your CRM or CSV",
               "Bulk-find contacts from company team pages",
             ]}
           />

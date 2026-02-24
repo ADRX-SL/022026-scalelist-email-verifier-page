@@ -140,7 +140,7 @@ const Hero = () => {
               </p>
               <div className="mb-10 flex flex-wrap items-center gap-4">
                 <Button size="lg" className="gap-2 rounded-full px-8 text-base">
-                  Try for free <ArrowRight className="h-4 w-4" />
+                  Download Chrome Extension <ArrowRight className="h-4 w-4" />
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full px-8 text-base">
                   Talk to Sales
