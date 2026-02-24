@@ -1,27 +1,24 @@
 
+## Fix: "up to 95%" Layout
 
-# Fix: Hero Title Line Breaks
+**Problem**: The current code places "up to" and "95%" on two lines (correct) but positions "Verified emails + direct dials" to the right of it using a horizontal flex layout. The screenshot shows "Verified emails + direct dials" should be **below** the "up to 95%" text, not beside it.
 
-## Problem
-The title in the screenshot displays as 4 lines:
-- Line 1: "Get the best"
-- Line 2: "emails and"
-- Line 3: "mobile numbers,"
-- Line 4: "Anywhere"
+**Change in `src/components/Accuracy.tsx` (around lines 77-80)**:
 
-The current code forces 3 lines using `<br />` tags, which does not match the reference.
+- Remove the horizontal `flex items-baseline gap-4` wrapper that places the subtitle next to the number
+- Stack "up to 95%" and "Verified emails + direct dials" vertically instead
+- Keep the `<br />` between "up to" and "95%" so it remains on two lines
 
-## Solution
-Update `src/components/Hero.tsx` (line 133-137) to remove the current `<br />` tags and instead let the text wrap naturally by constraining the `max-width` of the heading. The large font size combined with a narrower container will produce the exact 4-line break pattern shown in the screenshot.
-
-Alternatively, use explicit `<br />` tags matching the 4-line structure:
 ```
-Get the best<br />
-emails and<br />
-mobile numbers,<br />
-Anywhere
+Before:
+  <div className="mb-1 flex items-baseline gap-4">
+    <p className="text-4xl font-extrabold text-white">up to<br />95%</p>
+    <p className="text-sm text-gray-400">Verified emails + direct dials</p>
+  </div>
+
+After:
+  <p className="mb-1 text-4xl font-extrabold text-white">up to<br />95%</p>
+  <p className="mb-8 text-sm text-gray-400">Verified emails + direct dials</p>
 ```
 
-## File Change
-- **`src/components/Hero.tsx`** (lines 133-137): Update the `h1` content to use 4 line breaks matching the screenshot exactly, and add a `max-w-[600px]` constraint to ensure consistent wrapping.
-
+This makes "up to / 95%" a standalone stacked heading with the subtitle underneath, matching the screenshot exactly.
