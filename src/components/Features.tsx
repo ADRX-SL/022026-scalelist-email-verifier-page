@@ -16,10 +16,10 @@ const Features = () => {
   return (
     <section className="bg-primary py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary-foreground md:text-5xl">
-          97% deliverability on safe emails
+        <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-primary-foreground md:text-5xl">
+          99% deliverability on safe emails
         </h2>
-        <p className="mb-16 text-lg text-primary-foreground/80">
+        <p className="mb-16 text-center text-lg text-primary-foreground/80">
           Scalelist uses different verification methods to guarantee the best deliverability.
         </p>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
