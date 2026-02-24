@@ -165,7 +165,7 @@ const HowItWorks = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="mt-10 flex items-center justify-center gap-4">
+        <div className="my-12 flex items-center justify-center gap-4">
           <Button size="lg" className="gap-2 rounded-full px-8">
             Try for free
             <ArrowRight className="h-4 w-4" />
