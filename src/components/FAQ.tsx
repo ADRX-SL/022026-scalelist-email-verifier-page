@@ -8,24 +8,29 @@ import { Badge } from "@/components/ui/badge";
 
 const faqItems = [
   {
-    question: "What is Scalelist?",
+    question: "How can I find email addresses with Scalelist's Email Finder tool?",
     answer:
-      "Scalelist is a Chrome extension and data platform that helps sales teams find verified email addresses and mobile phone numbers from any website or social profile. It integrates directly into your browser workflow so you can build targeted lead lists without switching between tools.",
+      "To find professional email addresses using our tool, simply provide the person's full name and the domain name or website. Scalelist's Email Finder will then find and verify contact information for the specified professional",
   },
   {
-    question: "How accurate is the data?",
+    question: "How accurate is Scalelist's Email Finder in finding email addresses?",
     answer:
-      "Scalelist delivers up to 95% data accuracy across email addresses and phone numbers. Our data is refreshed weekly and verified using multiple validation methods to ensure you're always working with the most reliable contact information available.",
+      "Scalelist's Email Finder uses a sophisticated verification process that results in over 98% accuracy when identifying the status of an email address. This process ensures that email addresses marked as 'valid' have a bounce rate of less than 5%.",
   },
   {
-    question: "Does Scalelist integrate with my CRM?",
+    question: "What sets Scalelist's Email Finder ahead from other email lookup tools?",
     answer:
-      "Yes, Scalelist integrates with all major CRMs including Salesforce, HubSpot, and Pipedrive. You can also export your lead lists to CSV or sync them directly with your existing sales tools and workflows.",
+      "In addition to being extremely fast, easy to use, and way more affordable than competitors, Scalelist's Email Finder is able to confirm validity status on more email addresses from the same list of prospects, making it ideal for businesses operating with a limited number of prospects.",
   },
   {
-    question: "Is Scalelist GDPR compliant?",
+    question: "Can I find email addresses from a list of people?",
     answer:
-      "Absolutely. Scalelist is fully GDPR compliant. We only surface publicly available business contact information and follow strict data privacy protocols. You can learn more about our data practices in our privacy policy.",
+      "Yes, you can find email addresses from a list of people by using our bulk search feature. Upload a list of names and companies, and our email address finder will provide verified email addresses and their verification status in a CSV or Excel format\n\nThis email list can be easily imported in any CRM.",
+  },
+  {
+    question: "How much does it cost to use Scalelist's Email Finder for searching email addresses?",
+    answer:
+      "You only use 1 credit for each verified email you unlock. Every email on Scalelist is always verified. If you've already searched that contact, you won't be charged. The Free plan includes 100 credits per month. Paid plans start at $49/month for 1,500 credits, and the cost per credit drops on higher plans as you scale. You can also try the email finder on this page with 5 free searches.",
   },
 ];
 
