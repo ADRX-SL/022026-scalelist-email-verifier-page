@@ -8,29 +8,34 @@ import { Badge } from "@/components/ui/badge";
 
 const faqItems = [
   {
-    question: "How can I find email addresses with Scalelist's Email Finder tool?",
+    question: "How does Scalelist verify emails?",
     answer:
-      "To find professional email addresses using our tool, simply provide the person's full name and the domain name or website. Scalelist's Email Finder will then find and verify contact information for the specified professional",
+      "We do SMTP validation, MX record check, Catch-all check, Domain check, Spam traps, Disposable check, Syntax check, Graylist-proof.",
   },
   {
-    question: "How accurate is Scalelist's Email Finder in finding email addresses?",
+    question: "How does Scalelist email finder perform?",
     answer:
-      "Scalelist's Email Finder uses a sophisticated verification process that results in over 98% accuracy when identifying the status of an email address. This process ensures that email addresses marked as 'valid' have a bounce rate of less than 5%.",
+      "We guarantee a 3% maximum bounce rate on safe emails. Risky emails can bounce up to 17%.",
   },
   {
-    question: "What sets Scalelist's Email Finder ahead from other email lookup tools?",
+    question: "How much does a verification cost?",
     answer:
-      "In addition to being extremely fast, easy to use, and way more affordable than competitors, Scalelist's Email Finder is able to confirm validity status on more email addresses from the same list of prospects, making it ideal for businesses operating with a limited number of prospects.",
+      "Email verification are included",
   },
   {
-    question: "Can I find email addresses from a list of people?",
+    question: "Is Scalelist GDPR - CCPA compliant?",
     answer:
-      "Yes, you can find email addresses from a list of people by using our bulk search feature. Upload a list of names and companies, and our email address finder will provide verified email addresses and their verification status in a CSV or Excel format\n\nThis email list can be easily imported in any CRM.",
+      "Yes. Scalelist only provides professional emails usable for prospecting.",
   },
   {
-    question: "How much does it cost to use Scalelist's Email Finder for searching email addresses?",
+    question: "Can I cancel or change my plan at any time?",
     answer:
-      "You only use 1 credit for each verified email you unlock. Every email on Scalelist is always verified. If you've already searched that contact, you won't be charged. Our 14-days free plan includes 50 free credits. Paid plans start at $49/month for 1,500 credits, and the cost per credit drops on higher plans as you scale. You can also try the email finder on this page with 5 free searches.",
+      "You can cancel your monthly subscription at any time and continue using your credits until the end of your billing period.",
+  },
+  {
+    question: "What happens if I don't use all my credits?",
+    answer:
+      "Unused credits will roll over to the next billing period as long as you have an active subscription.",
   },
 ];
 
