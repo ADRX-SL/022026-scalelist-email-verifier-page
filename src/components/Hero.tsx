@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const TrustBar = () => {
   const logos = ["ElevenLabs", "CLOUDERA", "stripe", "J.P.Morgan", "ORACLE NetSuite", "BD"];
   return (
-    <div className="border-y border-border bg-white py-8">
+    <div className="border-y border-border bg-white py-12">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
           {logos.map((logo) => (
@@ -21,7 +21,7 @@ const TrustBar = () => {
 const Hero = () => {
   return (
     <>
-      <section className="relative overflow-hidden pb-8 pt-16">
+      <section className="relative overflow-hidden pb-12 pt-16">
         <div className="mx-auto max-w-3xl px-6 text-center">
           {/* Icon + Title */}
           <div className="mb-6 flex items-center justify-center gap-4">
