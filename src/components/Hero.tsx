@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const TrustBar = () => {
@@ -58,7 +58,17 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="mt-8 flex items-center justify-center gap-4">
+            <Button size="lg" className="rounded-full px-8 text-base">
+              Try for free <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <button className="rounded-full border border-border bg-white px-8 py-2.5 text-base font-medium text-foreground hover:bg-muted transition-colors">
+              Talk to sales
+            </button>
+          </div>
       </section>
       <TrustBar />
     </>
