@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const BarChart = () => {
   const competitors = [
@@ -36,21 +36,23 @@ const TestimonialCard = ({
   quote,
   name,
   role,
+  avatar,
 }: {
   quote: string;
   name: string;
   role: string;
+  avatar?: string;
 }) => (
   <div className="rounded-xl bg-white/5 p-6">
-    <div className="mb-3 flex gap-1">
-      {[...Array(5)].map((_, i) => (
-        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-      ))}
-    </div>
-    <p className="mb-4 text-sm text-gray-300">"{quote}"</p>
-    <div>
-      <p className="font-semibold text-white">{name}</p>
-      <p className="text-xs text-gray-400">{role}</p>
+    <p className="mb-4 text-sm italic text-gray-300">"{quote}"</p>
+    <div className="flex items-center gap-3">
+      {avatar && (
+        <img src={avatar} alt={name} className="h-10 w-10 rounded-full object-cover" />
+      )}
+      <div>
+        <p className="font-semibold text-white">{name}</p>
+        <p className="text-xs text-gray-400">{role}</p>
+      </div>
     </div>
   </div>
 );
@@ -71,8 +73,8 @@ const Accuracy = () => {
           <div className="rounded-2xl bg-white/5 p-8">
             <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-gray-400">Data coverage</p>
             <div className="mb-1 flex items-baseline gap-4">
-              <p className="text-4xl font-extrabold text-white">up to 95%</p>
-              <p className="text-sm text-gray-400">Verified emails + direct dials you can sell with</p>
+              <p className="text-4xl font-extrabold text-white">up to<br />95%</p>
+              <p className="text-sm text-gray-400">Verified emails + direct dials</p>
             </div>
             <p className="mb-8 text-sm text-gray-400">
               See how we perform against competitors. <span className="inline-block">→</span>
@@ -87,14 +89,16 @@ const Accuracy = () => {
             </h3>
             <div className="space-y-4">
               <TestimonialCard
-                quote="Scalelist has transformed our outbound. The email accuracy alone saved us 20 hours a week on bounced messages."
-                name="Sarah Chen"
-                role="VP of Sales, TechCorp"
+                quote="I love Scalelist — Cannot recommend it enough. It does EVERYTHING you need it to do really well. Easy to use/ navigate and Arnaud and colleagues are always there to lend a hand. Built by people who really care about their product."
+                name="Chris Hackett"
+                role="CEO & Founder @ Firm Growth"
+                avatar="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
               />
               <TestimonialCard
-                quote="We replaced 3 tools with Scalelist. The phone number accuracy is unmatched in the market."
-                name="Marcus Johnson"
-                role="Sales Director, GrowthCo"
+                quote="We use Scalelist everyday. It's a really good product that helps us find our prospects' emails and phone numbers."
+                name="Baptiste Graffin"
+                role="VP of Sales APAC @ Happydemics"
+                avatar="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
               />
             </div>
           </div>
