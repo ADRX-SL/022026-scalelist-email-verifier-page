@@ -20,7 +20,7 @@ const steps: {
     label: "Search on Professional profiles",
     title: "Search on Professional profiles",
     description:
-      "Find emails and phone numbers on Professional profiles instantly. Push leads to your CRM, CSV, or the tool of your choice in one-click.",
+      "Find verified emails on Professional profiles instantly. Push leads to your CRM, CSV, or the tool of your choice in one-click.",
     bullets: [
       "Find verified emails and mobile numbers instantly",
       "Export or sync to CRM, CSV, or any tool in one click",
