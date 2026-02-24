@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import featureProfilesImg from "@/assets/feature-profiles.png";
 import featureBulkImg from "@/assets/feature-bulk.png";
@@ -167,12 +167,11 @@ const HowItWorks = () => {
         {/* CTA Buttons */}
         <div className="mt-10 flex items-center justify-center gap-4">
           <Button size="lg" className="gap-2 rounded-full px-8">
-            <Sparkles className="h-4 w-4" />
-            Get started for free
-          </Button>
-          <Button variant="ghost" size="lg" className="gap-1 text-foreground">
-            Contact Sales
+            Try for free
             <ArrowRight className="h-4 w-4" />
+          </Button>
+          <Button variant="outline" size="lg" className="rounded-full px-8 bg-white text-foreground border border-border">
+            Talk to sales
           </Button>
         </div>
       </div>
