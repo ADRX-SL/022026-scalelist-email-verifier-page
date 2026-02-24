@@ -1,16 +1,15 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo-transparent-bg.png";
 
 const FooterCTA = () => {
   return (
     <section>
       <div className="mx-auto max-w-6xl px-6">
         <div className="rounded-2xl bg-card p-12 text-center">
-          <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-2xl font-bold text-primary-foreground">
-            S
-          </div>
+          <img src={logo} alt="Logo" className="mx-auto mb-6 h-14 w-14" />
           <h2 className="mb-8 text-4xl font-extrabold tracking-tight text-foreground">
-            Try our data quality for free!
+            Unlock B2B emails & mobile numbers for free
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button size="lg" className="rounded-full px-8 text-base">
