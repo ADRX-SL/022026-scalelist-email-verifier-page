@@ -1,56 +1,35 @@
-import { Mail, CheckCircle, XCircle } from "lucide-react";
+import { Star, Code, Filter, Waypoints, AlertTriangle, Trash2, AtSign, Flag, Hand } from "lucide-react";
 
-const EmailRow = ({
-  email,
-  percentage,
-  valid,
-}: {
-  email: string;
-  percentage: string;
-  valid: boolean;
-}) => (
-  <div className="flex items-center justify-between rounded-xl bg-white px-5 py-3 shadow-sm">
-    <div className="flex items-center gap-2">
-      <Mail className="h-4 w-4 text-muted-foreground/60" />
-      <span className="text-sm font-medium text-foreground">{email}</span>
-    </div>
-    <div className={`flex items-center gap-1 rounded-full px-3 py-1 text-sm font-semibold ${
-      valid ? "bg-green-100 text-green-700" : "bg-primary/10 text-primary"
-    }`}>
-      {percentage}
-      {valid ? (
-        <CheckCircle className="h-4 w-4 text-green-600" />
-      ) : (
-        <XCircle className="h-4 w-4 text-primary" />
-      )}
-    </div>
-  </div>
-);
+const features = [
+  { icon: Star, title: "SMTP validation", desc: "Remove dead, invalid, and unresponsive emails from your list." },
+  { icon: Code, title: "MX record check", desc: "An MX record check lets us confirm the email is in use and able to accept mail." },
+  { icon: Filter, title: "Catch-all check", desc: "We check against known catch-all email and domain databases." },
+  { icon: Waypoints, title: "Domain check", desc: "Our algorithm checks whether the email's domain is real." },
+  { icon: AlertTriangle, title: "Spam traps", desc: "Use our smart spamtrap indicators to remove honeypots." },
+  { icon: Trash2, title: "Disposable check", desc: "We can detect temporary, disposable, and questionable emails." },
+  { icon: AtSign, title: "Syntax check", desc: "We check that the email is typed correctly and all symbols are in place." },
+  { icon: Flag, title: "Graylist-proof", desc: "We are able to verify some of the most hard to check ESPs." },
+  { icon: Hand, title: "Risk Validation", desc: "Get rid of emails containing high risk keywords and TLDs." },
+];
 
 const Features = () => {
   return (
-    <section>
+    <section className="bg-primary py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-12 text-center text-4xl font-extrabold tracking-tight text-foreground md:text-5xl">
-          Find up to <span className="text-primary">95%</span> professional email addresses
+        <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary-foreground md:text-5xl">
+          97% deliverability on safe emails
         </h2>
-        <div className="flex justify-center">
-          <div className="max-w-xl">
-            <div className="rounded-2xl bg-card p-6">
-              <div className="space-y-3 rounded-xl bg-gradient-to-br from-orange-50/60 via-white to-pink-50/40 p-4">
-                <EmailRow email="calebdrayton@slack.com" percentage="83%" valid={false} />
-                <EmailRow email="samcruz@salesforce.com" percentage="99%" valid={true} />
-                <EmailRow email="eliasgranger@monday.com" percentage="100%" valid={true} />
-                <EmailRow email="danielferrera@apple.io" percentage="87%" valid={false} />
-              </div>
+        <p className="mb-16 text-lg text-primary-foreground/80">
+          Scalelist uses different verification methods to guarantee the best deliverability.
+        </p>
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
+          {features.map((f) => (
+            <div key={f.title} className="text-center">
+              <f.icon className="mx-auto mb-3 h-8 w-8 text-primary-foreground" />
+              <h3 className="mb-2 text-lg font-bold text-primary-foreground">{f.title}</h3>
+              <p className="text-sm text-primary-foreground/80">{f.desc}</p>
             </div>
-            <h3 className="mt-6 text-2xl font-bold text-foreground">
-              Pay for valid email addresses only.
-            </h3>
-            <p className="mt-3 text-muted-foreground">
-              With our email verification system, never pay for catch-all or emails you already found. We guarantee email validity and deliverability, or it's on us.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
