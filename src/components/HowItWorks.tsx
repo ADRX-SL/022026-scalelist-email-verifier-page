@@ -92,7 +92,7 @@ const HowItWorks = () => {
 
         {/* Heading */}
         <h2 className="mb-12 text-center text-4xl font-extrabold tracking-tight text-foreground md:text-5xl">
-          Email Finder: How You Can Use It
+          Email Verifier: How You Can Use It
         </h2>
 
         {/* Tab Navigation */}
