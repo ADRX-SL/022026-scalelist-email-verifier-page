@@ -51,7 +51,6 @@ const Features = () => {
             bullets={[
               "Extract emails and mobile numbers from any company website",
               "Effortless List Building: Export leads instantly to your CRM or CSV",
-              "Bulk-find contacts from company team pages",
             ]}
           />
         </div>

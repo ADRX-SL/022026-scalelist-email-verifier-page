@@ -2,27 +2,29 @@ import { Star, Quote } from "lucide-react";
 
 const BarChart = () => {
   const competitors = [
-    { name: "Comp 1", value: 55 },
-    { name: "Comp 2", value: 62 },
-    { name: "Comp 3", value: 48 },
-    { name: "Comp 4", value: 70 },
-    { name: "Comp 5", value: 58 },
-    { name: "Scalelist", value: 95, highlight: true },
+    { name: "COMP 1", value: 80 },
+    { name: "COMP 2", value: 71 },
+    { name: "COMP 3", value: 85 },
+    { name: "COMP 4", value: 75 },
+    { name: "COMP 5", value: 87 },
+    { name: "SCALELIST", value: 95, highlight: true },
   ];
 
   return (
-    <div className="space-y-3">
+    <div className="flex items-end justify-between gap-3" style={{ height: 220 }}>
       {competitors.map((c) => (
-        <div key={c.name} className="flex items-center gap-3">
-          <span className="w-20 text-right text-sm text-gray-400">{c.name}</span>
-          <div className="flex-1">
+        <div key={c.name} className="flex flex-1 flex-col items-center gap-2">
+          <span className={`text-sm font-semibold ${c.highlight ? "text-white" : "text-gray-300"}`}>
+            {c.value}%
+          </span>
+          <div className="relative w-full flex justify-center" style={{ height: 160 }}>
             <div
-              className={`h-7 rounded-md ${c.highlight ? "bg-primary" : "bg-gray-600"}`}
-              style={{ width: `${c.value}%` }}
+              className={`w-full max-w-[60px] rounded-t-md ${c.highlight ? "bg-primary" : "bg-white/10"}`}
+              style={{ height: `${(c.value / 100) * 160}px`, marginTop: "auto" }}
             />
           </div>
-          <span className={`w-12 text-sm font-semibold ${c.highlight ? "text-primary" : "text-gray-400"}`}>
-            {c.value}%
+          <span className={`text-[10px] font-semibold tracking-wider ${c.highlight ? "text-white" : "text-gray-500"}`}>
+            {c.name}
           </span>
         </div>
       ))}
@@ -67,8 +69,14 @@ const Accuracy = () => {
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Left - Data coverage */}
           <div className="rounded-2xl bg-white/5 p-8">
-            <h3 className="mb-2 text-lg font-semibold text-white">Data coverage</h3>
-            <p className="mb-8 text-4xl font-extrabold text-primary">up to 95%</p>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-gray-400">Data coverage</p>
+            <div className="mb-1 flex items-baseline gap-4">
+              <p className="text-4xl font-extrabold text-white">up to 95%</p>
+              <p className="text-sm text-gray-400">Verified emails + direct dials you can sell with</p>
+            </div>
+            <p className="mb-8 text-sm text-gray-400">
+              See how we perform against competitors. <span className="inline-block">→</span>
+            </p>
             <BarChart />
           </div>
 
