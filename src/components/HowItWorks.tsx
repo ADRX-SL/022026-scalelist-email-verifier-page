@@ -158,7 +158,7 @@ const HowItWorks = () => {
               <img
                 src={current.image}
                 alt={current.title}
-                className="max-h-[400px] w-full rounded-xl object-contain"
+                className="max-h-[400px] w-full rounded-2xl object-contain"
               />
             </div>
           </div>
