@@ -1,13 +1,18 @@
 import chrisHackettImg from "@/assets/chris-hackett.webp";
 import baptisteGraffinImg from "@/assets/baptiste-graffin.webp";
+import logoApollo from "@/assets/logo-apollo.jpg";
+import logoZoomInfo from "@/assets/logo-zoominfo.png";
+import logoLusha from "@/assets/logo-lusha.png";
+import logoProspeo from "@/assets/logo-prospeo.webp";
+import logoScalelist from "@/assets/logo-scalelist.png";
 
 const competitors = [
-  { name: "Apollo", value: 78 },
-  { name: "ZoomInfo", value: 69 },
-  { name: "Lusha", value: 83 },
-  { name: "Prospeo", value: 72 },
+  { name: "Apollo", value: 78, logo: logoApollo },
+  { name: "ZoomInfo", value: 69, logo: logoZoomInfo },
+  { name: "Lusha", value: 83, logo: logoLusha },
+  { name: "Prospeo", value: 72, logo: logoProspeo },
   { name: "Fullenrich", value: 84 },
-  { name: "Scalelist", value: 95, highlight: true },
+  { name: "Scalelist", value: 95, highlight: true, logo: logoScalelist },
 ];
 
 const MAX_BAR_HEIGHT = 220;
@@ -36,13 +41,23 @@ const DataCoverageChart = () => {
 
           return (
             <div key={c.name} className="flex flex-col items-center" style={{ width: isHighlight ? 50 : 44 }}>
-              <span
-                className={`text-[10px] tracking-wide mb-2 ${
-                  isHighlight ? "text-chart-bar-highlight font-bold" : "text-muted-foreground"
-                }`}
-              >
-                {c.name}
-              </span>
+              {c.logo ? (
+                <div
+                  className={`rounded-full overflow-hidden bg-white flex items-center justify-center ${
+                    isHighlight ? "w-[50px] h-[50px]" : "w-[44px] h-[44px]"
+                  }`}
+                >
+                  <img src={c.logo} alt={c.name} className="w-full h-full object-contain p-1.5" />
+                </div>
+              ) : (
+                <span
+                  className={`text-[10px] tracking-wide mb-2 ${
+                    isHighlight ? "text-chart-bar-highlight font-bold" : "text-muted-foreground"
+                  }`}
+                >
+                  {c.name}
+                </span>
+              )}
               <span
                 className={`text-xs mb-1 ${
                   isHighlight ? "text-white font-bold" : "text-gray-400 font-semibold"
