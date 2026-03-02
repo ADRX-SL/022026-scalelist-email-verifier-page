@@ -43,10 +43,10 @@ const DataCoverageChart = () => {
           return (
             <div key={c.name} className="flex flex-col items-center" style={{ width: isHighlight ? 56 : 48 }}>
               <div
-                className="rounded-full overflow-hidden flex items-center justify-center border border-white/20 p-1"
-                style={{ width: isHighlight ? 48 : 44, height: isHighlight ? 48 : 44 }}
+                className="rounded-full flex items-center justify-center border border-white/30"
+                style={{ width: isHighlight ? 52 : 46, height: isHighlight ? 52 : 46, padding: 4 }}
               >
-                <img src={c.logo} alt={c.name} className="w-full h-full object-contain" />
+                <img src={c.logo} alt={c.name} className="w-full h-full object-contain drop-shadow-[0_0_1px_rgba(255,255,255,0.8)]" />
               </div>
               <span
                 className={`text-xs mb-1 ${
