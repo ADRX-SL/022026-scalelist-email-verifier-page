@@ -17,8 +17,8 @@ const steps: {
 }[] = [
   {
     step: 1,
-    label: "Search on Professional profiles",
-    title: "Search on Professional profiles",
+    label: "Search on Professional Profiles",
+    title: "Search on Professional Profiles",
     description:
       "Find verified emails on Professional profiles instantly. Push leads to your CRM, CSV, or the tool of your choice in one-click.",
     bullets: [
@@ -154,11 +154,11 @@ const HowItWorks = () => {
             </div>
 
             {/* Right: Image */}
-            <div>
+            <div className="flex items-center justify-center rounded-2xl bg-white p-4">
               <img
                 src={current.image}
                 alt={current.title}
-                className="w-full rounded-2xl object-contain"
+                className="w-full rounded-xl object-contain"
               />
             </div>
           </div>
