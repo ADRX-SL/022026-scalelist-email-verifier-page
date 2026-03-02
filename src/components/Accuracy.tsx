@@ -8,12 +8,12 @@ import iconFullenrich from "@/assets/icon-fullenrich.png";
 import iconScalelist from "@/assets/icon-scalelist.png";
 
 const competitors = [
-  { name: "Apollo", value: 78, logo: iconApollo },
-  { name: "ZoomInfo", value: 69, logo: iconZoomInfo },
-  { name: "Lusha", value: 83, logo: iconLusha },
-  { name: "Prospeo", value: 72, logo: iconProspeo },
-  { name: "Fullenrich", value: 84, logo: iconFullenrich },
-  { name: "Scalelist", value: 95, highlight: true, logo: iconScalelist },
+  { name: "Apollo", value: 78, logo: iconApollo, bg: "bg-[#1a1a2e]" },
+  { name: "ZoomInfo", value: 69, logo: iconZoomInfo, bg: "bg-[#dc2626]" },
+  { name: "Lusha", value: 83, logo: iconLusha, bg: "bg-[#1e293b]" },
+  { name: "Prospeo", value: 72, logo: iconProspeo, bg: "bg-[#dc2626]" },
+  { name: "Fullenrich", value: 84, logo: iconFullenrich, bg: "bg-[#1e293b]" },
+  { name: "Scalelist", value: 95, highlight: true, logo: iconScalelist, bg: "bg-[#1e40af]" },
 ];
 
 const MAX_BAR_HEIGHT = 220;
@@ -43,13 +43,13 @@ const DataCoverageChart = () => {
           return (
             <div key={c.name} className="flex flex-col items-center" style={{ width: isHighlight ? 56 : 48 }}>
               <div
-                className={`rounded-full overflow-hidden flex items-center justify-center ${
+                className={`rounded-full overflow-hidden flex items-center justify-center ${c.bg} ${
                   isHighlight
-                    ? "w-[52px] h-[52px] bg-white/15 border-2 border-white/20"
-                    : "w-[44px] h-[44px] bg-white/10 border border-white/10"
+                    ? "w-[52px] h-[52px] border-2 border-white/20"
+                    : "w-[46px] h-[46px] border border-white/10"
                 }`}
               >
-                <img src={c.logo} alt={c.name} className="w-[75%] h-[75%] object-contain" />
+                <img src={c.logo} alt={c.name} className="w-[80%] h-[80%] object-contain" />
               </div>
               <span
                 className={`text-xs mb-1 ${
