@@ -1,19 +1,19 @@
 import chrisHackettImg from "@/assets/chris-hackett.webp";
 import baptisteGraffinImg from "@/assets/baptiste-graffin.webp";
-import logoApollo from "@/assets/logo-apollo.jpg";
-import logoZoomInfo from "@/assets/logo-zoominfo.png";
-import logoLusha from "@/assets/logo-lusha.png";
-import logoProspeo from "@/assets/logo-prospeo.webp";
-import logoFullenrich from "@/assets/logo-fullenrich.png";
-import logoScalelist from "@/assets/logo-scalelist.png";
+import iconApollo from "@/assets/icon-apollo.png";
+import iconZoomInfo from "@/assets/icon-zoominfo.png";
+import iconLusha from "@/assets/icon-lusha.png";
+import iconProspeo from "@/assets/icon-prospeo.png";
+import iconFullenrich from "@/assets/icon-fullenrich.png";
+import iconScalelist from "@/assets/icon-scalelist.png";
 
 const competitors = [
-  { name: "Apollo", value: 78, logo: logoApollo },
-  { name: "ZoomInfo", value: 69, logo: logoZoomInfo },
-  { name: "Lusha", value: 83, logo: logoLusha },
-  { name: "Prospeo", value: 72, logo: logoProspeo },
-  { name: "Fullenrich", value: 84, logo: logoFullenrich },
-  { name: "Scalelist", value: 95, highlight: true, logo: logoScalelist },
+  { name: "Apollo", value: 78, logo: iconApollo },
+  { name: "ZoomInfo", value: 69, logo: iconZoomInfo },
+  { name: "Lusha", value: 83, logo: iconLusha },
+  { name: "Prospeo", value: 72, logo: iconProspeo },
+  { name: "Fullenrich", value: 84, logo: iconFullenrich },
+  { name: "Scalelist", value: 95, highlight: true, logo: iconScalelist },
 ];
 
 const MAX_BAR_HEIGHT = 220;
@@ -41,15 +41,15 @@ const DataCoverageChart = () => {
           const isHighlight = !!c.highlight;
 
           return (
-            <div key={c.name} className="flex flex-col items-center" style={{ width: isHighlight ? 50 : 44 }}>
+            <div key={c.name} className="flex flex-col items-center" style={{ width: isHighlight ? 56 : 48 }}>
               <div
-                className={`rounded-full overflow-hidden flex items-center justify-center border border-white/10 ${
+                className={`rounded-full overflow-hidden flex items-center justify-center ${
                   isHighlight
-                    ? "w-[48px] h-[48px] bg-white/15"
-                    : "w-[40px] h-[40px] bg-white/10"
+                    ? "w-[52px] h-[52px] bg-white/15 border-2 border-white/20"
+                    : "w-[44px] h-[44px] bg-white/10 border border-white/10"
                 }`}
               >
-                <img src={c.logo} alt={c.name} className="w-[70%] h-[70%] object-contain" />
+                <img src={c.logo} alt={c.name} className="w-[75%] h-[75%] object-contain" />
               </div>
               <span
                 className={`text-xs mb-1 ${
