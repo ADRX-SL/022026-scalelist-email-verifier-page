@@ -93,4 +93,8 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+
+  p {
+    margin-block-end: 0;
+  }
 }
