@@ -9,8 +9,8 @@ import logoBd from "@/assets/logo-bd.png";
 
 const TrustBar = () => {
   const logos = [
-    { name: "ElevenLabs", src: logoElevenlabs, height: "h-6" },
-    { name: "Cloudera", src: logoCloudera, height: "h-6" },
+    { name: "ElevenLabs", src: logoElevenlabs, height: "h-8" },
+    { name: "Cloudera", src: logoCloudera, height: "h-5" },
     { name: "Stripe", src: logoStripe, height: "h-7" },
     { name: "J.P.Morgan", src: logoJpmorgan, height: "h-7" },
     { name: "Oracle NetSuite", src: logoNetsuite, height: "h-8" },
