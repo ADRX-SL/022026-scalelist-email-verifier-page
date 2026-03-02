@@ -1,16 +1,32 @@
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoElevenlabs from "@/assets/logo-elevenlabs.avif";
+import logoCloudera from "@/assets/logo-cloudera.webp";
+import logoStripe from "@/assets/logo-stripe.png";
+import logoJpmorgan from "@/assets/logo-jpmorgan.webp";
+import logoNetsuite from "@/assets/logo-netsuite.webp";
+import logoBd from "@/assets/logo-bd.png";
 
 const TrustBar = () => {
-  const logos = ["ElevenLabs", "CLOUDERA", "stripe", "J.P.Morgan", "ORACLE NetSuite", "BD"];
+  const logos = [
+    { name: "ElevenLabs", src: logoElevenlabs, height: "h-6" },
+    { name: "Cloudera", src: logoCloudera, height: "h-6" },
+    { name: "Stripe", src: logoStripe, height: "h-7" },
+    { name: "J.P.Morgan", src: logoJpmorgan, height: "h-7" },
+    { name: "Oracle NetSuite", src: logoNetsuite, height: "h-8" },
+    { name: "BD", src: logoBd, height: "h-7" },
+  ];
   return (
     <div className="border-y border-border bg-white py-12">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
           {logos.map((logo) => (
-            <span key={logo} className="text-lg font-semibold tracking-wide text-muted-foreground/60">
-              {logo}
-            </span>
+            <img
+              key={logo.name}
+              src={logo.src}
+              alt={logo.name}
+              className={`${logo.height} w-auto object-contain opacity-60 grayscale`}
+            />
           ))}
         </div>
       </div>
@@ -40,7 +56,7 @@ const Hero = () => {
 
           {/* Email Verifier Form */}
           <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-muted/40 p-6 shadow-sm">
-            <div className="mb-1 text-left">
+            <div className="mb-1 text-center">
               <h2 className="text-xl font-bold text-foreground">Email Verifier</h2>
               <p className="text-sm text-muted-foreground">Check if an email is deliverable</p>
             </div>
