@@ -26,9 +26,11 @@ const WeeklyData = () => {
           </h2>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full px-8 text-base">
-              Get started for free
-            </Button>
+            <a href="https://app.scalelist.com/auth/login?redirectUrl=%2Fapp%2Fdashboard">
+              <Button size="lg" className="rounded-full px-8 text-base">
+                Get started for free
+              </Button>
+            </a>
             <Button size="lg" variant="outline" className="rounded-full px-8 text-base">
               View all reviews
             </Button>

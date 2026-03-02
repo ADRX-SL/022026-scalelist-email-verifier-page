@@ -166,13 +166,17 @@ const HowItWorks = () => {
 
         {/* CTA Buttons */}
         <div className="mt-16 flex items-center justify-center gap-4">
-          <Button size="lg" className="gap-2 rounded-full px-8">
-            Try for free
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-          <Button variant="outline" size="lg" className="rounded-full px-8 bg-white text-foreground border border-border">
-            Talk to sales
-          </Button>
+          <a href="https://app.scalelist.com/auth/login?redirectUrl=%2Fapp%2Fdashboard">
+            <Button size="lg" className="gap-2 rounded-full px-8">
+              Try for free
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </a>
+          <a href="https://form.typeform.com/to/lvQHcXGx?typeform-source=scalelist.com">
+            <Button variant="outline" size="lg" className="rounded-full px-8 bg-white text-foreground border border-border">
+              Talk to sales
+            </Button>
+          </a>
         </div>
       </div>
     </section>
