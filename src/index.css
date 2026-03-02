@@ -39,6 +39,11 @@
     --brand-dark: 0 0% 10%;
     --brand-dark-section: 240 30% 12%;
 
+    --chart-link: 217 91% 60%;
+    --chart-link-hover: 217 91% 70%;
+    --chart-bar: 220 15% 35%;
+    --chart-bar-highlight: 217 91% 60%;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
