@@ -1,6 +1,5 @@
-import { Quote } from "lucide-react";
-import chrisHackettImg from "@/assets/chris-hackett.png";
-import baptisteGraffinImg from "@/assets/baptiste-graffin.png";
+import chrisHackettImg from "@/assets/chris-hackett.webp";
+import baptisteGraffinImg from "@/assets/baptiste-graffin.webp";
 
 const BarChart = () => {
   const competitors = [
@@ -13,19 +12,34 @@ const BarChart = () => {
   ];
 
   return (
-    <div className="flex items-end justify-between gap-3" style={{ height: 220 }}>
-      {competitors.map((c) => (
-        <div key={c.name} className="flex flex-1 flex-col items-center gap-2">
-          <span className={`text-sm font-semibold ${c.highlight ? "text-white" : "text-gray-300"}`}>
+    <div className="flex items-end gap-3" style={{ height: 240 }}>
+      {competitors.map((c, i) => (
+        <div
+          key={c.name}
+          className={`flex flex-1 flex-col items-center gap-2 ${c.highlight ? "ml-4" : ""}`}
+        >
+          <span
+            className={`font-bold ${
+              c.highlight ? "text-2xl text-white" : "text-sm text-gray-400"
+            }`}
+          >
             {c.value}%
           </span>
-          <div className="relative w-full flex justify-center" style={{ height: 160 }}>
+          <div className="relative w-full flex justify-center" style={{ height: 180 }}>
             <div
-              className={`w-full max-w-[60px] rounded-t-md ${c.highlight ? "bg-primary" : "bg-white/10"}`}
-              style={{ height: `${(c.value / 100) * 160}px`, marginTop: "auto" }}
+              className={`rounded-t-md ${
+                c.highlight
+                  ? "w-full max-w-[72px] bg-primary shadow-[0_0_24px_rgba(37,99,235,0.5)]"
+                  : "w-full max-w-[48px] bg-white/10"
+              }`}
+              style={{ height: `${(c.value / 100) * 180}px`, marginTop: "auto" }}
             />
           </div>
-          <span className={`text-[10px] font-semibold tracking-wider ${c.highlight ? "text-white" : "text-gray-500"}`}>
+          <span
+            className={`text-[10px] font-semibold tracking-wider ${
+              c.highlight ? "text-primary text-xs" : "text-gray-500"
+            }`}
+          >
             {c.name}
           </span>
         </div>
@@ -78,8 +92,8 @@ const Accuracy = () => {
               <p className="text-4xl font-extrabold text-white">up to 95%</p>
               <p className="text-sm text-gray-400">Verified emails + direct dials</p>
             </div>
-            <p className="mb-8 text-sm text-gray-400">
-              See how we perform against competitors. <span className="inline-block">→</span>
+            <p className="mb-8 text-sm font-bold text-gray-400">
+              See how we perform against competitors <span className="inline-block">→</span>
             </p>
             <BarChart />
           </div>
@@ -94,13 +108,13 @@ const Accuracy = () => {
                 quote="I love Scalelist — Cannot recommend it enough. It does EVERYTHING you need it to do really well. Easy to use/ navigate and Arnaud and colleagues are always there to lend a hand. Built by people who really care about their product."
                 name="Chris Hackett"
                 role="CEO & Founder @ Firm Growth"
-                avatar="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+                avatar={chrisHackettImg}
               />
               <TestimonialCard
                 quote="We use Scalelist everyday. It's a really good product that helps us find our prospects' emails and phone numbers."
                 name="Baptiste Graffin"
                 role="VP of Sales APAC @ Happydemics"
-                avatar="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+                avatar={baptisteGraffinImg}
               />
             </div>
           </div>
