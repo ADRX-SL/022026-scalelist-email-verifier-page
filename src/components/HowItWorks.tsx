@@ -154,11 +154,11 @@ const HowItWorks = () => {
             </div>
 
             {/* Right: Image */}
-            <div className="flex items-center justify-center">
+            <div className="flex items-start justify-center rounded-xl bg-muted/50 p-4">
               <img
                 src={current.image}
                 alt={current.title}
-                className="max-h-[400px] w-full rounded-2xl object-contain"
+                className="w-full rounded-xl object-contain"
               />
             </div>
           </div>
