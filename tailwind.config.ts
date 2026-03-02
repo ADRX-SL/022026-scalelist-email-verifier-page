@@ -52,6 +52,10 @@ export default {
         },
         "brand-dark": "hsl(var(--brand-dark))",
         "brand-dark-section": "hsl(var(--brand-dark-section))",
+        "chart-link": "hsl(var(--chart-link))",
+        "chart-link-hover": "hsl(var(--chart-link-hover))",
+        "chart-bar": "hsl(var(--chart-bar))",
+        "chart-bar-highlight": "hsl(var(--chart-bar-highlight))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

@@ -1,49 +1,63 @@
 import chrisHackettImg from "@/assets/chris-hackett.webp";
 import baptisteGraffinImg from "@/assets/baptiste-graffin.webp";
 
-const BarChart = () => {
-  const competitors = [
-    { name: "COMP 1", value: 80 },
-    { name: "COMP 2", value: 71 },
-    { name: "COMP 3", value: 85 },
-    { name: "COMP 4", value: 75 },
-    { name: "COMP 5", value: 87 },
-    { name: "SCALELIST", value: 95, highlight: true },
-  ];
+const competitors = [
+  { name: "Apollo", value: 78 },
+  { name: "ZoomInfo", value: 69 },
+  { name: "Lusha", value: 83 },
+  { name: "Prospeo", value: 72 },
+  { name: "Fullenrich", value: 84 },
+  { name: "Scalelist", value: 95, highlight: true },
+];
 
+const MAX_BAR_HEIGHT = 220;
+
+const DataCoverageChart = () => {
   return (
-    <div className="flex items-end gap-3" style={{ height: 240 }}>
-      {competitors.map((c, i) => (
-        <div
-          key={c.name}
-          className={`flex flex-1 flex-col items-center gap-2 ${c.highlight ? "ml-4" : ""}`}
-        >
-          <span
-            className={`font-bold ${
-              c.highlight ? "text-2xl text-white" : "text-sm text-gray-400"
-            }`}
-          >
-            {c.value}%
-          </span>
-          <div className="relative w-full flex justify-center" style={{ height: 180 }}>
-            <div
-              className={`rounded-t-md ${
-                c.highlight
-                  ? "w-full max-w-[72px] bg-primary shadow-[0_0_24px_rgba(37,99,235,0.5)]"
-                  : "w-full max-w-[48px] bg-white/10"
-              }`}
-              style={{ height: `${(c.value / 100) * 180}px`, marginTop: "auto" }}
-            />
-          </div>
-          <span
-            className={`text-[10px] font-semibold tracking-wider ${
-              c.highlight ? "text-primary text-xs" : "text-gray-500"
-            }`}
-          >
-            {c.name}
-          </span>
-        </div>
-      ))}
+    <div className="flex flex-col items-start gap-4">
+      <p className="text-xs tracking-widest uppercase text-muted-foreground font-bold">
+        Data Coverage
+      </p>
+      <div className="flex items-baseline gap-3">
+        <span className="text-4xl font-bold text-white">up to 95%</span>
+        <span className="text-sm text-gray-400">Verified emails + direct dials</span>
+      </div>
+      <button
+        className="text-sm font-bold text-chart-link hover:underline cursor-pointer bg-transparent border-none p-0 transition-colors hover:text-chart-link-hover"
+        onClick={() => {}}
+      >
+        See how we perform against competitors
+      </button>
+
+      <div className="flex items-end gap-6 mt-6">
+        {competitors.map((c) => {
+          const barHeight = (c.value / 100) * MAX_BAR_HEIGHT;
+          const isHighlight = !!c.highlight;
+
+          return (
+            <div key={c.name} className="flex flex-col items-center" style={{ width: isHighlight ? 50 : 44 }}>
+              <span
+                className={`text-[10px] tracking-wide mb-2 ${
+                  isHighlight ? "text-chart-bar-highlight font-bold" : "text-muted-foreground"
+                }`}
+              >
+                {c.name}
+              </span>
+              <span
+                className={`text-xs mb-1 ${
+                  isHighlight ? "text-white font-bold" : "text-gray-400 font-semibold"
+                }`}
+              >
+                {c.value}%
+              </span>
+              <div
+                className={`w-full rounded-sm ${isHighlight ? "bg-chart-bar-highlight" : "bg-chart-bar"}`}
+                style={{ height: `${barHeight}px` }}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -87,15 +101,7 @@ const Accuracy = () => {
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Left - Data coverage */}
           <div className="rounded-2xl bg-white/5 p-8">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-gray-400">Data coverage</p>
-            <div className="mb-8 flex items-baseline gap-4">
-              <p className="text-4xl font-extrabold text-white">up to 95%</p>
-              <p className="text-sm text-gray-400">Verified emails + direct dials</p>
-            </div>
-            <p className="mb-8 text-sm font-bold text-gray-400">
-              See how we perform against competitors <span className="inline-block">→</span>
-            </p>
-            <BarChart />
+            <DataCoverageChart />
           </div>
 
           {/* Right - Testimonials */}
