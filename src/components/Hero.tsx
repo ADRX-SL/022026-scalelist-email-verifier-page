@@ -83,7 +83,7 @@ const Hero = () => {
                 Try for free <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
-            <a href="https://form.typeform.com/to/lvQHcXGx?typeform-source=scalelist.com" className="rounded-full border border-border bg-white px-8 py-2.5 text-base font-medium text-foreground hover:bg-muted transition-colors">
+            <a href="https://form.typeform.com/to/lvQHcXGx?typeform-source=scalelist.com" className="rounded-full border border-border bg-white px-8 py-2.5 text-base font-medium text-accent-foreground hover:bg-muted transition-colors">
               Talk to sales
             </a>
           </div>
