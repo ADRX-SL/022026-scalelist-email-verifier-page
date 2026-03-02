@@ -34,7 +34,7 @@ const WeeklyData = () => {
               </Button>
             </a>
             <a href="https://chromewebstore.google.com/detail/email-finder-by-scalelist/lgknneiodddmfbbpaklighafdocbfnme?pli=1" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="rounded-full px-8 text-base">
+              <Button size="lg" variant="outline" className="rounded-full px-8 text-base text-accent-foreground">
                 View all reviews
               </Button>
             </a>
