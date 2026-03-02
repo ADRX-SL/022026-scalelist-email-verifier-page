@@ -42,23 +42,15 @@ const DataCoverageChart = () => {
 
           return (
             <div key={c.name} className="flex flex-col items-center" style={{ width: isHighlight ? 50 : 44 }}>
-              {c.logo ? (
-                <div
-                  className={`rounded-full overflow-hidden bg-white flex items-center justify-center ${
-                    isHighlight ? "w-[50px] h-[50px]" : "w-[44px] h-[44px]"
-                  }`}
-                >
-                  <img src={c.logo} alt={c.name} className="w-full h-full object-contain p-1.5" />
-                </div>
-              ) : (
-                <span
-                  className={`text-[10px] tracking-wide mb-2 ${
-                    isHighlight ? "text-chart-bar-highlight font-bold" : "text-muted-foreground"
-                  }`}
-                >
-                  {c.name}
-                </span>
-              )}
+              <div
+                className={`rounded-full overflow-hidden flex items-center justify-center border border-white/10 ${
+                  isHighlight
+                    ? "w-[48px] h-[48px] bg-white/15"
+                    : "w-[40px] h-[40px] bg-white/10"
+                }`}
+              >
+                <img src={c.logo} alt={c.name} className="w-[70%] h-[70%] object-contain" />
+              </div>
               <span
                 className={`text-xs mb-1 ${
                   isHighlight ? "text-white font-bold" : "text-gray-400 font-semibold"
