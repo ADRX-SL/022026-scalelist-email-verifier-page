@@ -4,6 +4,7 @@ import logoApollo from "@/assets/logo-apollo.jpg";
 import logoZoomInfo from "@/assets/logo-zoominfo.png";
 import logoLusha from "@/assets/logo-lusha.png";
 import logoProspeo from "@/assets/logo-prospeo.webp";
+import logoFullenrich from "@/assets/logo-fullenrich.png";
 import logoScalelist from "@/assets/logo-scalelist.png";
 
 const competitors = [
@@ -11,7 +12,7 @@ const competitors = [
   { name: "ZoomInfo", value: 69, logo: logoZoomInfo },
   { name: "Lusha", value: 83, logo: logoLusha },
   { name: "Prospeo", value: 72, logo: logoProspeo },
-  { name: "Fullenrich", value: 84 },
+  { name: "Fullenrich", value: 84, logo: logoFullenrich },
   { name: "Scalelist", value: 95, highlight: true, logo: logoScalelist },
 ];
 
