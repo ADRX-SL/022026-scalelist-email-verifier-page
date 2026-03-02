@@ -12,12 +12,16 @@ const FooterCTA = () => {
             Unlock B2B emails &amp;<br />mobile numbers for free
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full px-8 text-base">
-              Get started for free
-            </Button>
-            <Button size="lg" variant="outline" className="gap-2 rounded-full px-8 text-base">
-              Talk to Sales <ArrowRight className="h-4 w-4" />
-            </Button>
+            <a href="https://app.scalelist.com/auth/login?redirectUrl=%2Fapp%2Fdashboard">
+              <Button size="lg" className="rounded-full px-8 text-base">
+                Get started for free
+              </Button>
+            </a>
+            <a href="https://form.typeform.com/to/lvQHcXGx?typeform-source=scalelist.com">
+              <Button size="lg" variant="outline" className="gap-2 rounded-full px-8 text-base">
+                Talk to Sales <ArrowRight className="h-4 w-4" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>

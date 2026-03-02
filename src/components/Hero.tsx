@@ -78,12 +78,14 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="mt-8 flex items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full px-8 text-base">
-              Try for free <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <button className="rounded-full border border-border bg-white px-8 py-2.5 text-base font-medium text-foreground hover:bg-muted transition-colors">
+            <a href="https://app.scalelist.com/auth/login?redirectUrl=%2Fapp%2Fdashboard">
+              <Button size="lg" className="rounded-full px-8 text-base">
+                Try for free <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+            <a href="https://form.typeform.com/to/lvQHcXGx?typeform-source=scalelist.com" className="rounded-full border border-border bg-white px-8 py-2.5 text-base font-medium text-foreground hover:bg-muted transition-colors">
               Talk to sales
-            </button>
+            </a>
           </div>
       </section>
       <TrustBar />
