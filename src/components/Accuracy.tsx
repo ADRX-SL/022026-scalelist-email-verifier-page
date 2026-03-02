@@ -8,12 +8,12 @@ import iconFullenrich from "@/assets/icon-fullenrich.png";
 import iconScalelist from "@/assets/icon-scalelist.png";
 
 const competitors = [
-  { name: "Apollo", value: 78, logo: iconApollo, pad: 4 },
-  { name: "ZoomInfo", value: 69, logo: iconZoomInfo, pad: 8 },
-  { name: "Lusha", value: 83, logo: iconLusha, pad: 4 },
-  { name: "Prospeo", value: 72, logo: iconProspeo, pad: 8 },
-  { name: "Fullenrich", value: 84, logo: iconFullenrich, pad: 4 },
-  { name: "Scalelist", value: 95, highlight: true, logo: iconScalelist, pad: 8 },
+  { name: "Apollo", value: 78, logo: iconApollo },
+  { name: "ZoomInfo", value: 69, logo: iconZoomInfo },
+  { name: "Lusha", value: 83, logo: iconLusha },
+  { name: "Prospeo", value: 72, logo: iconProspeo },
+  { name: "Fullenrich", value: 84, logo: iconFullenrich },
+  { name: "Scalelist", value: 95, highlight: true, logo: iconScalelist },
 ];
 
 const MAX_BAR_HEIGHT = 220;
@@ -42,12 +42,7 @@ const DataCoverageChart = () => {
 
           return (
             <div key={c.name} className="flex flex-col items-center" style={{ width: isHighlight ? 56 : 48 }}>
-              <div
-                className="rounded-full flex items-center justify-center border border-white/30"
-                style={{ width: isHighlight ? 52 : 46, height: isHighlight ? 52 : 46, padding: c.pad }}
-              >
-                <img src={c.logo} alt={c.name} className="w-full h-full object-contain drop-shadow-[0_0_1px_rgba(255,255,255,0.8)]" />
-              </div>
+              <img src={c.logo} alt={c.name} className="object-contain mb-2" style={{ width: isHighlight ? 40 : 34, height: isHighlight ? 40 : 34 }} />
               <span
                 className={`text-xs mb-1 ${
                   isHighlight ? "text-white font-bold" : "text-gray-400 font-semibold"
